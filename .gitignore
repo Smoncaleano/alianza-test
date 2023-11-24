@@ -1,0 +1,78 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+frontend/angular-user-management/dist
+frontend/angular-user-management/tmp
+frontend/angular-user-management/out-tsc
+frontend/angular-user-management/bazel-out
+
+# Node
+frontend/angular-user-management/node_modules
+frontend/angular-user-management/npm-debug.log
+frontend/angular-user-management/yarn-error.log
+
+# IDEs and editors
+frontend/angular-user-management/.idea/
+frontend/angular-user-management/.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+frontend/angular-user-management/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+
+
+HELP.md
+frontend/angular-user-management/target/
+frontend/angular-user-management/!.mvn/wrapper/maven-wrapper.jar
+frontend/angular-user-management/!**/src/main/**/target/
+frontend/angular-user-management/!**/src/test/**/target/
+
+### STS ###
+frontend/angular-user-management/.apt_generated
+frontend/angular-user-management/.classpath
+frontend/angular-user-management/.factorypath
+frontend/angular-user-management/.project
+frontend/angular-user-management/.settings
+frontend/angular-user-management/.springBeans
+frontend/angular-user-management/.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+frontend/angular-user-management/!**/src/main/**/build/
+frontend/angular-user-management/!**/src/test/**/build/
+
+### VS Code ###
+.vscode/

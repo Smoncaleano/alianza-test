@@ -1,0 +1,12 @@
+<div class="user-list">
+    <div class="buttons">
+      <button (click)="openPopup('new')">New</button>
+      <button>Export</button>
+    </div>
+    <input [(ngModel)]="sharedKey" placeholder="Enter Shared Key" />
+    <button (click)="searchUser()">Search</button>
+  
+    <ul>
+      <li *ngFor="let user of userList">{{ user.sharedKey }}</li>
+    </ul>
+  </div>
