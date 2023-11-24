@@ -1,9 +1,49 @@
-<div class="sidebar">
-    <div class="title">Menu</div>
-    <ul>
-      <li>Clientes</li>
-      <li>Client Look History</li>
-      <li>Emergency PIN Configuration</li>
-      <li>Emergency PIN History</li>
-    </ul>
+
+
+<nav id="sidebar" [class.active]="sidebarActive">
+  <div class="sidebar-header">
+    <img src="assets\alianza.png" alt="Logo">
   </div>
+
+  <ul class="list-unstyled components">
+    <li class="sidebar-item">
+      <div class="icon-container">
+        <i *ngIf="isActiveRoute('/clients')" class="bi bi-person fa-5x custom-icon"></i>
+      </div>
+      <div class="text-container">
+        <a [routerLink]="['/clients']" [class]="isActiveRoute('/clients') ? 'sidebar-link active' : 'sidebar-link'">
+          Clients
+        </a>
+      </div>
+    </li>
+    <li class="sidebar-item">
+      <div class="icon-container">
+      </div>
+      <div class="text-container">
+        <a [routerLink]="['/home']" [class]="isActiveRoute('/home') ? 'sidebar-link active' : 'sidebar-link'">
+        Client look history
+        </a>
+      </div>
+    </li>
+    <li class="sidebar-item">
+      <div class="icon-container">
+       
+      </div>
+      <div class="text-container">
+        <a [routerLink]="['/home']" [class]="isActiveRoute('/home2') ? 'sidebar-link active' : 'sidebar-link'">
+          Emergency PIN configuration
+        </a>
+      </div>
+    </li>
+    <li class="sidebar-item">
+      <div class="icon-container">
+       
+      </div>
+      <div class="text-container">
+        <a [routerLink]="['/home']" [class]="isActiveRoute('/home1') ? 'sidebar-link active' : 'sidebar-link'">
+          Emergency PIN history
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>

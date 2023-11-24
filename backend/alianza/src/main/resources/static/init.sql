@@ -14,6 +14,6 @@ ALTER TABLE USERDATA ADD CONSTRAINT UK_BusinessID UNIQUE (BusinessID);
 -- Insertar datos de prueba
 INSERT INTO USERDATA (SharedKey, BusinessID, Email, Phone, EndDate,StartDate, DateAdded)
 VALUES
-    ('clave1', 'Empresa 1', 'empresa1@example.com', '123-456-7891', '2023-11-24', '2023-11-24', '2023-11-24'),
-    ('clave2', 'Empresa 2', 'empresa2@example.com', '123-456-7892', '2023-11-24', '2023-11-24', '2023-11-24'),
-    ('clave10', 'Empresa 10', 'empresa10@example.com', '123-456-78910', '2023-11-24', '2023-11-24', '2023-11-24');
+    ('sebastianm', 'Sebastian', 'sebastianm@example.com', '123-456-7891', '2023-11-24', '2023-11-24', '2023-11-24'),
+    ('moncaleanom', 'Moncaleano', 'moncaleanom@example.com', '123-456-7892', '2023-11-24', '2023-11-24', '2023-11-24'),
+    ('mosqueram', 'Mosquera', 'mosqueram@example.com', '123-456-78910', '2023-11-24', '2023-11-24', '2023-11-24');

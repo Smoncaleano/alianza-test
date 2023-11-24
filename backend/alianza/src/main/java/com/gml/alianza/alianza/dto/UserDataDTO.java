@@ -19,6 +19,6 @@ public class UserDataDTO {
     private String email;
     private String phone;
     private Date dateAdded;
-    private Date startdate;
-    private Date enddate;
+    private Date startDate;
+    private Date endDate;
 }

@@ -1,12 +1,54 @@
-<div class="user-list">
-    <div class="buttons">
-      <button (click)="openPopup('new')">New</button>
-      <button>Export</button>
+<div class="container-fluid">
+  <div class="centered-element">
+    <div class="row">
+      <div class="col-md-2 mb-3">
+        <button (click)="openPopup('new')" class="btn btn-primary custom-btn">
+          <i class="bi bi-plus"></i> New
+        </button>
+      </div>
+      <div class="col-md-2 mb-3">
+        <button (click)="exportUsers()" class="btn btn-primary custom-btn" [disabled]="userList.length === 0">
+          <i class="bi bi-file-earmark-arrow-down"></i> Export
+        </button>
+      </div>
     </div>
-    <input [(ngModel)]="sharedKey" placeholder="Enter Shared Key" />
-    <button (click)="searchUser()">Search</button>
-  
-    <ul>
-      <li *ngFor="let user of userList">{{ user.sharedKey }}</li>
-    </ul>
+
+    <div class="search-container mb-5">
+      <input [(ngModel)]="sharedKey" placeholder="Enter Shared Key" />
+      <button (click)="searchUser()" class="search-button">Search</button>
+    </div>
+
+    <h2 class="mb-5" style="color: #0088cc">Clients</h2>
+
+    <div *ngIf="userList?.length == 0" class="alert alert-info mb-5">
+      No hay registros en la base de datos!
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-bordered mb-2 table-hover" *ngIf="userList.length > 0">
+        <thead>
+          <tr>
+            <th class="text-center">Shared Key</th>
+            <th class="text-center">Business ID</th>
+            <th class="text-center">E-mail</th>
+            <th class="text-center">Phone</th>
+            <th class="text-center">Date Added</th>
+            <th class="text-center">Editar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of userList">
+            <td class="text-center">{{ usuario.sharedKey }}</td>
+            <td class="text-center">{{ usuario.businessID }}</td>
+            <td class="text-center">{{ usuario.email }}</td>
+            <td class="text-center">{{ usuario.phone }}</td>
+            <td class="text-center">{{ usuario.startDate }}</td>
+            <td class="text-center">
+              <i class="bi bi-pencil"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+</div>

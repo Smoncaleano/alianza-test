@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl = 'http://localhost:8080/api/user-data'; // Cambia esto según tu configuración del servidor
+  private apiUrl = 'http://localhost:8080/api/alianza'; 
 
   constructor(private http: HttpClient) { }
 
